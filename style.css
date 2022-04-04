@@ -175,9 +175,7 @@ footer {
 /* Mudanças para versão mobile */
 
 @media(max-width: 414px){
-    .finalizar{
-        width: 80%;
-    }
+
 
     .item-menu > img {
         width: 80%;
