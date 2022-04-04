@@ -31,16 +31,35 @@
             <p class="titulo-cardapio">Primeiro, seu prato</p>
             <div class="cardapio">
 
-                <div class="item-menu">
+                <div class="item-menu" onclick="selecionarPrato(this), aparecerBotao()">
                     <img src="./_img/leque-de-potes-1024x658.png" alt="">
                     <div class="descricao">
                         <p class="titulo-prato">Frango no Pote</p>
-                        <p class="descricao-prato">Peito de frango suculento e saboroso, acompanhado com os melhotes
-                            molhos para você se deliciar</p>
-                        <p class="preco">R$ 23,90</p>
+                        <p class="descricao-prato">Peito de frango suculento e saboroso</p>
+                        <p class="preco">23,90</p>
                     </div>
+                    <ion-icon class="icone" name="checkmark-circle-outline"></ion-icon>
                 </div>
 
+                <div class="item-menu" onclick="selecionarPrato(this), aparecerBotao()">
+                    <img src="./_img/hamburguer.jpg" alt="">
+                    <div class="descricao">
+                        <p class="titulo-prato">Hamburguer</p>
+                        <p class="descricao-prato">Hamburguer de picanha</p>
+                        <p class="preco">44,90</p>
+                    </div>
+                    <ion-icon class="icone" name="checkmark-circle-outline"></ion-icon>
+                </div>
+                
+                <div class="item-menu" onclick="selecionarPrato(this), aparecerBotao()">
+                    <img src="./_img/pizzacalabresa.jpg" alt="">
+                    <div class="descricao">
+                        <p class="titulo-prato">Pizza de Calabresa</p>
+                        <p class="descricao-prato">Pizza grande de calabresa</p>
+                        <p class="preco">53,90</p>
+                    </div>
+                    <ion-icon class="icone" name="checkmark-circle-outline"></ion-icon>
+                </div>
 
             </div>
         </div>
@@ -49,31 +68,69 @@
             <p class="titulo-cardapio">Agora, sua bebida</p>
             <div class="cardapio">
 
-                <div class="item-menu">
-                    <img src="./_img/leque-de-potes-1024x658.png" alt="">
+                <div class="item-menu" onclick="selecionarBebida(this), aparecerBotao()">
+                    <img src="./_img/fantalaranja.jpg" alt="">
                     <div class="descricao">
-                        <p class="titulo-prato">Frango no Pote</p>
-                        <p class="descricao-prato">Peito de frango suculento e saboroso, acompanhado com os melhotes
-                            molhos para você se deliciar</p>
-                        <p class="preco">R$ 23,90</p>
+                        <p class="titulo-prato">Fanta</p>
+                        <p class="descricao-prato">Refrigerante 310ml</p>
+                        <p class="preco">5,90</p>
                     </div>
+                    <ion-icon class="icone" name="checkmark-circle-outline"></ion-icon>
                 </div>
 
+                <div class="item-menu" onclick="selecionarBebida(this), aparecerBotao()">
+                    <img src="./_img/coca.jpg" alt="">
+                    <div class="descricao">
+                        <p class="titulo-prato">Coca-Cola</p>
+                        <p class="descricao-prato">Refrigerante 310ml</p>
+                        <p class="preco">5,90</p>
+                    </div>
+                    <ion-icon class="icone" name="checkmark-circle-outline"></ion-icon>
+                </div>
 
+                <div class="item-menu" onclick="selecionarBebida(this), aparecerBotao()">
+                    <img src="./_img/guarana.jpg" alt="">
+                    <div class="descricao">
+                        <p class="titulo-prato">Guaraná</p>
+                        <p class="descricao-prato">Refrigerante 310ml</p>
+                        <p class="preco">5,90</p>
+                    </div>
+                    <ion-icon class="icone" name="checkmark-circle-outline"></ion-icon>
+                </div>
             </div>
         </div>
         <div class="sobremesa">
             <p class="titulo-cardapio">Por fim, sua sobremesa</p>
             <div class="cardapio">
 
-                <div class="item-menu">
-                    <img src="./_img/leque-de-potes-1024x658.png" alt="">
+                <div class="item-menu" onclick="selecionarSobremesa(this), aparecerBotao()">
+                    <img src="./_img/sorvete.jpg" alt="">
                     <div class="descricao">
-                        <p class="titulo-prato">Frango no Pote</p>
-                        <p class="descricao-prato">Peito de frango suculento e saboroso, acompanhado com os melhotes
-                            molhos para você se deliciar</p>
-                        <p class="preco">R$ 23,90</p>
+                        <p class="titulo-prato">Sorvete</p>
+                        <p class="descricao-prato">Sorvete napolitano</p>
+                        <p class="preco">R$ 10,90</p>
                     </div>
+                    <ion-icon class="icone" name="checkmark-circle-outline"></ion-icon>
+                </div>
+
+                <div class="item-menu" onclick="selecionarPrato(this), aparecerBotao()">
+                    <img src="./_img/docedeleite.jpg" alt="">
+                    <div class="descricao">
+                        <p class="titulo-prato">Doce de Leite</p>
+                        <p class="descricao-prato">Doce 100% caseiro</p>
+                        <p class="preco">15.90</p>
+                    </div>
+                    <ion-icon class="icone" name="checkmark-circle-outline"></ion-icon>
+                </div>
+
+                <div class="item-menu" onclick="selecionarSobremesa(this), aparecerBotao()">
+                    <img src="./_img/pudim.jpg" alt="">
+                    <div class="descricao">
+                        <p class="titulo-prato">Pudim</p>
+                        <p class="descricao-prato">Pudim da vovó Ana</p>
+                        <p class="preco">8,90</p>
+                    </div>
+                    <ion-icon class="icone" name="checkmark-circle-outline"></ion-icon>
                 </div>
 
             </div>
@@ -83,10 +140,14 @@
     </div>
 
     <footer>
-        <button class="finalizar">
+        <button class="finalizar" onclick="finalizarPedido()">
             Selecione os 3 itens para fechar o pedido
         </button>
     </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="project.js"></script>
 </body>
 
 </html>
