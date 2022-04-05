@@ -75,10 +75,11 @@ function aparecerBotao(){
 }
 
 function finalizarPedido(){
-	const nome = prompt("Qual o seu nome?");
+	
+    if(prato && bebida && sobremesa !== null){
+		const nome = prompt("Qual o seu nome?");
 	const endereco = prompt("Qual o endereço do local de entrega?")
 
-    if(prato && bebida && sobremesa !== null){
 		const total = precoPrato + precoBebida + precoSobremesa;
             let mensagem = encodeURIComponent(
 			`Olá gostaria de fazer o pedido:\n
