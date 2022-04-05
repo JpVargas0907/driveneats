@@ -1,12 +1,17 @@
 let prato = null
-let bebida = null
+let bebida = null 
 let sobremesa = null
 
-let n1 = null
-let n2 = null
-let n3 = null
-let somaPedido = n1+n2+n3;
+let precoPrato;
+let precoBebida;
+let precoSobremesa;
 
+
+function converterNumero(preco){
+    preco = preco.replace("R$ ", "").replace(",", ".")
+    preco = Number(preco) * 100;
+	return preco;
+}
 
 function selecionarPrato(elemento){
     const icone = document.querySelector(".prato").querySelector(".selecionado ion-icon")
@@ -21,8 +26,8 @@ function selecionarPrato(elemento){
     elemento.querySelector(".selecionado ion-icon").style.display = "block"
 
     prato = document.querySelector(".prato .selecionado .titulo-prato").innerHTML
-    n1 = document.querySelector(".prato .selecionado .preco").innerHTML
-    parseFloat(n1)
+    let preco = document.querySelector(".prato .selecionado .preco").innerHTML
+    precoPrato = converterNumero(preco)
 }
 
 function selecionarBebida(elemento){
@@ -38,8 +43,8 @@ function selecionarBebida(elemento){
     elemento.querySelector(".selecionado ion-icon").style.display = "block"
 
     bebida = document.querySelector(".bebida .selecionado .titulo-prato").innerHTML
-    n2 = document.querySelector(".prato .selecionado .preco").innerHTML
-    parseFloat(n2)
+    let preco = document.querySelector(".bebida .selecionado .preco").innerHTML
+    precoBebida = converterNumero(preco)
 }
 
 function selecionarSobremesa(elemento){
@@ -55,8 +60,8 @@ function selecionarSobremesa(elemento){
     elemento.querySelector(".selecionado ion-icon").style.display = "block"
 
     sobremesa = document.querySelector(".sobremesa .selecionado .titulo-prato").innerHTML
-    n3 = document.querySelector(".prato .selecionado .preco").innerHTML
-    parseFloat(n3)
+    let preco = document.querySelector(".sobremesa .selecionado .preco").innerHTML
+    precoSobremesa = converterNumero(preco)
 }
 
 function aparecerBotao(){
@@ -69,13 +74,17 @@ function aparecerBotao(){
     }
 }
 
-
 function finalizarPedido(){
-
-
     if(prato && bebida && sobremesa !== null){
-            let mensagem = `Olá gostaria de pedir o combo ${prato} , ${bebida} e ${sobremesa}!`
-            window.open(`https://api.whatsapp.com/send?phone=55061994008800&text=${mensagem}`)
+		const total = precoPrato + precoBebida + precoSobremesa;
+            let mensagem = encodeURIComponent(
+			`Olá gostaria de fazer o pedido:\n
+			-Prato: ${prato}\n
+			-Bebida: ${bebida}\n
+			-Sobremesa: ${sobremesa}\n
+			Total: R$ ${(total/100).toFixed(2)}`)
+
+            window.open(`https://api.whatsapp.com/send?phone=55061994511653&text=${mensagem}`)
     } else {
         alert("Complete o combo para finalizar o seu pedido")
     }
