@@ -75,6 +75,9 @@ function aparecerBotao(){
 }
 
 function finalizarPedido(){
+	const nome = prompt("Qual o seu nome?");
+	const endereco = prompt("Qual o endereço do local de entrega?")
+
     if(prato && bebida && sobremesa !== null){
 		const total = precoPrato + precoBebida + precoSobremesa;
             let mensagem = encodeURIComponent(
@@ -82,7 +85,9 @@ function finalizarPedido(){
 			-Prato: ${prato}\n
 			-Bebida: ${bebida}\n
 			-Sobremesa: ${sobremesa}\n
-			Total: R$ ${(total/100).toFixed(2)}`)
+			Total: R$ ${(total/100).toFixed(2)}\n
+			Nome: ${nome}
+			Endereço: ${endereco}`)
 
             window.open(`https://api.whatsapp.com/send?phone=55061994511653&text=${mensagem}`)
     } else {
