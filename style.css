@@ -1,6 +1,6 @@
 /* Especificações gerais */
 
-body{
+body {
     font-family: 'Encode Sans', sans-serif;
     background-color: #CBCBCB;
 }
@@ -11,7 +11,7 @@ body{
 
 /* Barra Topo */
 
-.topo{
+.topo {
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -25,14 +25,14 @@ body{
     z-index: 1;
 }
 
-.topo > .logo {
+.topo>.logo {
     color: #ffffff;
     font-size: 44px;
     font-family: 'Righteous', cursive;
     margin-left: 21px;
 }
 
-.topo > p {
+.topo>p {
     color: white;
     font-size: 18px;
     margin-left: 21px;
@@ -42,20 +42,21 @@ body{
 
 /* Lista de pratos disponível */
 
+.conteudo {
+    margin: 92px auto;
+    padding: 20px;
+}
+
 .prato {
-    margin-top: 122px;
-    margin-left: 20px;
-    margin-bottom: 26px;
+    margin-bottom: 12px;
 }
 
-.bebida{
-    margin-left: 20px;
-    margin-bottom: 26px;
+.bebida {
+    margin-bottom: 12px;
 }
 
-.sobremesa{
-    margin-left: 20px;
-    margin-bottom: 108px;
+.sobremesa {
+    margin-bottom: 12px;
 }
 
 .titulo-cardapio {
@@ -65,51 +66,47 @@ body{
     margin-bottom: 18px;
 }
 
-.cardapio{
+.cardapio {
+    overflow-x: scroll;
+    width: 100%;
+    padding: 10px 0;
     display: flex;
-    justify-content: left;
-    overflow-x:scroll;
-    
 }
 
-.item-menu{
+.item-menu {
     position: relative;
-    width: 172px;
-    height: 216px;
-    background-color: #ffffff;
-    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    width: 150px;
+    padding: 18px 14px;
     border-radius: 9px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-right: 14px;
+    background-color: white;
+    box-shadow: 0 0 10px -4px rgba(0, 0, 0, 0.25);
+    margin-right: 16px;
 }
 
-.item-menu > .icone{
+.item-menu > .icone {
     display: none;
     background-color: #32B72F;
     border-radius: 50%;
     color: #ffffff;
     position: absolute;
-    right: 5px;
-    bottom: 5px;
+    right: 10px;
+    bottom: 10px;
 }
 
-.item-menu > img {
+.item-menu>img {
     width: 144px;
-    height: 86px;
-    border-radius: 5px;
-    margin-top: 18px;
-    object-fit: contain;
+    max-height: 87px;
+    object-fit: cover;
+    border-radius: 4px;
 }
 
 .selecionado {
-    border: #32B72F solid 5px;
-    box-sizing: border-box;
+    border: 5px solid #32b72f;
+    padding: 13px 9px;
 }
 
 
-.checked{
+.checked {
     background-color: #32B72F;
     border-radius: 50%;
     color: #ffffff;
@@ -119,32 +116,23 @@ body{
     display: flex;
 }
 
-.descricao{
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    width: 144px;
-    text-align: start;
-}
 
-.descricao > .titulo-prato {
-    font-weight: 700;
+.descricao >.titulo-prato {
     font-size: 16px;
-    margin-top: 4px;
+    font-weight: bold;
+    margin: 11px 0 15px;
 }
 
-.descricao > .descricao-prato {
-    font-weight: 300;
+.descricao >.descricao-prato {
     font-size: 15px;
-    color: #A6A6A6;
-    margin-top: 4px;
+    color: #a6a6a6;
+    font-weight: 300;
+    margin-bottom: 15px;
 }
 
-.descricao > .preco {
+.descricao >.preco {
     font-weight: bold;
     font-size: 16px;
-    margin-top: 6px;
-    margin-bottom: 10px;
 }
 
 
@@ -172,16 +160,4 @@ footer {
     background-color: #CBCBCB;
     border-radius: 50px;
     border: 0;
-}
-
-/* Mudanças para versão mobile */
-
-@media (max-width: 414px){
-    .finalizar{
-        width: 80%;
-    }
-
-    .item-menu img {
-        margin-top: 10px;
-    }
 }
