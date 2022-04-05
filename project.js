@@ -89,7 +89,7 @@ function finalizarPedido(){
 			Nome: ${nome}
 			Endereço: ${endereco}`)
 
-            window.open(`https://api.whatsapp.com/send?phone=55061994511653&text=${mensagem}`)
+            window.open(`https://api.whatsapp.com/send?phone=55061998336068&text=${mensagem}`)
     } else {
         alert("Complete o combo para finalizar o seu pedido")
     }
